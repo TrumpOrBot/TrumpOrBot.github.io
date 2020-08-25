@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'Times New Roman';
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    background: repeating-linear-gradient(
+		to bottom,
+		#B22234,
+		#B22234 120px,
+		#FFFFFF 120px,
+		#FFFFFF 220px
+	);
+    margin: 0;
+    font-family: lucida grande, Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+
+}
+
+
+.mainSite {
+    color: rgba(265,265,265,0.9);
+    text-align: center;
+}
+
+.mainSite .title {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 3.5em;
+    font-family: times new roman;
+    font-weight: bold;
+}
+
+.mainSite .description {
+    font-size: 2em;
+    line-height: 1.5em;
+
+}
+
+.mainSite .playButton {
+    font-size: 2em;
+	line-height: 2.5em;
+    cursor: pointer;
+	text-align:center;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	background-clip: content-box;
+}
+
+.questionContainer {
+    text-align: center;
+    padding-top: 3.5em;
+	background: rgba(60, 59, 110, 0.95);
+	border: 10px solid #2F2D7B;
+	min-height: 90vh;
+}
+
+.questionObject {
+    text-align: center;
+    color: rgba(265,265,265,0.9);
+}
+
+.questionObject .gameName {
+    font-size: 1.3em;
+    line-height: 1.6em;
+    text-align: center;
+    width: 100%;
+}
+
+.gameName:before {
+    display: block;
+    content: "\275D";
+    font-size: 4em;
+    position: absolute;
+    left: -0.5em;
+    top: 0px;
+    color: rgba(265,265,265,0.7);
+;
+}
+
+.questionObject .gameAnswer {
+    color: white;
+    line-height: 1.4em;
+    font-size: 2.5em;
+	display: block;
+	margin-top: 1.5em;
+  font-family: times new roman;
+}
+.questionObject .gameDescription {
+    color: white;
+    line-height: 1.5em;
+    font-size: 1.25em;
+    padding-bottom: 1em;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.questionObject .gameImage {
+    padding-top: 1em;
+    display: block;
+}
+
+.questionObject .gameImage .picture {
+    max-width: 200px;
+}
+
+.picture {
+	padding-bottom:20px;
+}
+
+
+.questionOption {
+	padding-bottom:2em;
+}
+
+.totalResult {
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    font-size: 2.2em;
+
+
+
+    -webkit-touch-callout: initial !important; /* iOS Safari */
+    -webkit-user-select: initial !important; /* Safari */
+     -khtml-user-select: initial !important; /* Konqueror HTML */
+       -moz-user-select: initial !important; /* Old versions of Firefox */
+        -ms-user-select: initial !important; /* Internet Explorer/Edge */
+            user-select: initial !important; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.questionsOptions {
+    text-align: center;
+    font-size: 1.8em;
+    cursor: pointer;
+    line-height: 3em;
+}
+
+.questionTrump, .questionBot {
+  background-color: #FFFFFF;
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	background-clip: content-box;
+
+}
+
+
+.questionBot{
+}
+
+.questionNext {
+    background-color: #FFFFFF;
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	background-clip: content-box;
+	margin-top:1em;
+	padding-bottom:2em;
+}
+
+.questionEndGame {
+    background-color: #FFFFFF;
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	background-clip: content-box;
+}
+
+.questionNewGame {
+    font-size: 1em;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;
+	background-clip: content-box;
+}
+
+.extraInfo {
+    font-size: .6em;
+    line-height: 1.3;
+    padding: 10px 5px;
+	color: rgba(265,265,265,0.9);
+  margin-top: -3em;
+
+}
+
+.extraInfo a {
+    color: antiquewhite;
+}
+
+.score {
+	opacity: 0.7;
+  font-size: 1.3em;
+  font-family: Times New Roman;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+
+}
+
+.spacer {
+	height: 40px;
+}
+
+
+.col-12{
+  margin-bottom: 1em;
+}
+
+
+a {
+  color: antiquewhite;;
+  font-size: 1em;
+}
+
+a:hover{
+  color: rgba(265,265,265);
+  text-decoration-line: underline;
+}
+
+
+@media (max-width: 480px) {
+
+    .col-12 {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .share {
+        padding: 0px 15px;
+    }
+
+    .mainSite .title {
+        margin-top: 60px;
+        padding-bottom: 20px;
+        font-size: 2em;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+    }
+
+    .mainSite .description {
+        font-size: 1.5em;
+    }
+
+    .questionContainer {
+        padding-top: .5em;
+    }
+
+    .questionObject .gameName {
+        font-size: 1em;
+    }
+
+    .questionObject .gameAnswer {
+        font-size: 2em;
+    }
+
+
+    .questionOption {
+        padding-left: 0;
+        font-size: .7em;
+      line-height: 2.5em;
+        cursor: pointer;
+      text-align:center;
+      background-color: #FFFFFF;
+      color: #000000;
+      font-weight: bold;
+      font-family: Lucida Grande, Verdana, Geneva, Tahoma, sans-serif;
+	  padding-bottom:2em;
+    }
+
+    .questionObject .gameDescription {
+        line-height: 1.5em;
+        font-size: 1em;
+        padding-bottom: 0em;
+    }
+	
+    .questionObject .gameImage .picture {
+        max-height: 200px;
+    }
+
+    .totalResult {
+        padding-top: .5em;
+        text-align: center;
+        color: rgba(265,265,265);
+        font-size: 2.2em;
+        margin: 0 auto;
+    }
+}
