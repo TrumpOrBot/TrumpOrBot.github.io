@@ -165,10 +165,6 @@ function nextQuestion() {
     } else {
         showEnded();
     }
-	gtag('event', 'quizProgress', {
-		'event_category': 'quizMetrics',
-		'value': currentQuestion
-	});
 }
 
 // Validate if answer is correct in current question
@@ -212,8 +208,8 @@ function showAnswer(isRight) {
     }
 	gtag('event', 'quizResultsProgress', {
 		'event_category': 'quizMetrics',
-		'correctAnswers': rightAnswers,
-		'questionsAttempted': currentQuestion
+		'correctAnswersProgress': rightAnswers,
+		'questionsAttemptedProgress': currentQuestion
 	});
 }
 
@@ -223,10 +219,6 @@ function showTotalResult() {
 
     $(".totalResult .totalAnswers").text(`Right answers ${rightAnswers} of ${questions.length}`);
     showButton("new");
-	gtag('event', 'quizComplete', {
-		'event_category': 'quizMetrics',
-		'value': rightAnswers
-	});
 }
 
 // Hide all buttons and the display the proper element, according to the parameter
@@ -263,12 +255,6 @@ function showButton(btnName) {
             $(".questionNewGame").show();
             $(".share").show();
             $(".extraInfo").show();
-			retries += 1;
-			gtag('event', 'startOver', {
-				'event_category': 'quizMetrics',
-				'value': retries
-			});
-
             break;
     }
 }
@@ -289,13 +275,28 @@ $(".questionBot").on("click", () => {
 
 $(".questionNext").on("click", () => {
     nextQuestion();
+	gtag('event', 'quizProgress', {
+		'event_category': 'quizMetrics',
+		'value': currentQuestion,
+		'quizProgressReached': currentQuestion
+	});
 });
 
 $(".questionEndGame").on("click", () => {
     showTotalResult();
+	gtag('event', 'quizComplete', {
+		 'event_category': 'quizMetrics',
+		 'value': rightAnswers,
+		 'finalScore': rightAnswers
+	});
 });
 
 $(".questionNewGame").on("click", () => {
+	retries += 1;
+	gtag('event', 'startOver', {
+		 'event_category': 'quizMetrics',
+		 'retriesValue': retries
+	});
     location.reload();
 });
 
